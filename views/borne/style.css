@@ -1,0 +1,139 @@
+body {
+  background-color: black;
+  font-family: Arial;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: red;
+  width: 1080px;
+  height: 1920px;
+}
+
+.tabs {
+  background-color: white;
+  box-shadow: 1px 1px 10px black;
+  width: 20%;
+  height: 80%;
+}
+
+.products {
+  box-shadow: 0px 0px 10px black;
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  grid-auto-rows: 300px;
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: center;
+  overflow-y:auto;
+}
+
+.payment-description {
+  background-color: blue;
+  width: 100%;
+  height: 20%;
+}
+
+.button-product {
+  padding: 0px;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  border-style: none;
+  cursor:pointer;
+  box-shadow: 2px 2px 5px black;
+}
+
+.product-thumbnail {
+  width: 200px;
+  height:200px;
+  margin-top: 10px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.product-name {
+  width: 250px;
+  font-size: 25px;
+  margin: 0px;
+}
+
+.product-price {
+  font-size: 25px;
+  width: 250px;
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
+
+.text-command {
+  background-color: dimgray;
+  box-shadow: 0px 0px 10px black;
+  width:100%;
+  height: 20%;
+}
+
+.cart {
+  background-color: grey;
+  box-shadow: 0px 0px 10px black;
+  width:100%;
+  height: 50%;
+}
+
+.confirm-cancel {
+  background-color: grey;
+  box-shadow: 0px 0px 10px black;
+  width:100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  gap: 70px;
+}
+
+.confirm-button {
+  width:40%;
+  height: 70%;
+  border-style:none;
+  border-radius: 15px;
+  cursor:pointer;
+  font-size: 40px;
+  background-color: green;
+  box-shadow: 0px 0px 10px black;
+  color: white;
+}
+
+.cancel-button {
+  width:40%;
+  height: 70%;
+  border-style: none;
+  border-radius: 15px;
+  cursor:pointer;
+  font-size: 40px;
+  background-color: red;
+  box-shadow: 0px 0px 10px black;
+  color: white;
+}
+
+.product-cart {
+  margin-top:0;
+  padding-left:15px;
+  padding-top:5px;
+  color: white;
+  font-size: 30px;
+}
+
+.total {
+  margin: 0px;
+  font-size: 35px;
+  color: white;
+  padding-top:20px;
+  text-align: center;
+  vertical-align: middle;
+}
