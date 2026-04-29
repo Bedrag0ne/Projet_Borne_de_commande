@@ -3,4 +3,3 @@ const products = [
   {id: 2,name: 'Moyenne Frite',priceCents: 390,thumbnail:'/images/frite_moyenne.png'},
   {id: 3,name: 'Coca-Cola&#174; 40CL - Taxe boisson sucrée',priceCents: 369,thumbnail:'/images/coca-cola.png'},
 ];
-
