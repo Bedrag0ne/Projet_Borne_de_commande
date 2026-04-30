@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 
-const articlesRoutes = require('./routes/articlesRoutes');
+const productsRoutes = require('./routes/productsRoutes');
+
+app.use('/api', productsRoutes);
 
 app.use(express.json());
 app.use(express.static('./views'));
-
-app.use('/api', articlesRoutes);
 
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
