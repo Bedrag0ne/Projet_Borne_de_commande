@@ -1,32 +1,17 @@
-const articlesModel = require('../models/productsModel');
+const productsModel = require('../models/productsModel');
 
 async function getAllProducts() {
-  const products = {};
-  const rows = await articlesModel.getAllProducts();
-
+  const products = [];
+  const rows = await productsModel.getAllProducts();
   for (const row of rows) {
-    if (!products[row.id]) {
-      products[row.id] = {
-        id: row.id,
-        name: row.name,
-        basePriceCents: row.base_price_cents,
-        productImage: row.product_image,
-        sizes: []
-      };
-    }
-
-    if (row.size_id !== null) {
-      products[row.id].sizes = products[row.id].sizes.concat([{
-        sizeId: row.size_id,
-        sizeName: row.size_name,
-        sizePriceCents: row.size_price_cents,
-        sizeImage: row.size_image
-      }]);
-    } else {
-      products[row.id].sizes = null;
-    }
+    products.push({
+      id: row.id,
+      name: row.name,
+      priceCents: row.price_cents,
+      thumbnail: row.thumbnail
+    });
   }
-  return Object.values(products);
+  return products;
 }
 
 module.exports = {

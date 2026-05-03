@@ -1,4 +1,3 @@
 node_modules/
 db/database.db
-db/seed.sql
 db/seed.js

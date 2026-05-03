@@ -1,8 +1,8 @@
-const articlesService = require('../services/productsService');
+const productsService = require('../services/productsService');
 
 async function getAllProducts(req, res) {
   try {
-    const products = await articlesService.getAllProducts();
+    const products = await productsService.getAllProducts();
     res.json(products);
   } catch (err) {
     console.error(err);
